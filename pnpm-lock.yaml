@@ -1,5 +1,5 @@
 dependencies:
-  http-server: 0.11.1
+  http-server: 0.12.3
 lockfileVersion: 5.1
 packages:
   /async/2.6.3:
@@ -8,12 +8,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
-  /colors/1.0.3:
+  /basic-auth/1.1.0:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-RSIe5Cn37h5QNb4/UVM/HN/SmIQ=
+  /colors/1.4.0:
     dev: false
     engines:
       node: '>=0.1.90'
     resolution:
-      integrity: sha1-BDP0TYCWgP3rYO0mDxsMJi6CpAs=
+      integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
   /corser/2.0.1:
     dev: false
     engines:
@@ -63,20 +69,24 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-84I2iJM/n1d4Hdgc6y2+qY5mDaz2PUVjlg9znE9byl+q0uC3DeByqBGReQu5tpLK0TAqTIXScRUV+dg7+bUPpQ==
-  /http-server/0.11.1:
+  /http-server/0.12.3:
     dependencies:
-      colors: 1.0.3
+      basic-auth: 1.1.0
+      colors: 1.4.0
       corser: 2.0.1
       ecstatic: 3.3.2
       http-proxy: 1.18.0
-      opener: 1.4.3
-      optimist: 0.6.1
+      minimist: 1.2.5
+      opener: 1.5.1
       portfinder: 1.0.26
-      union: 0.4.6
+      secure-compare: 3.0.1
+      union: 0.5.0
     dev: false
+    engines:
+      node: '>=6'
     hasBin: true
     resolution:
-      integrity: sha512-6JeGDGoujJLmhjiRGlt8yK8Z9Kl0vnl/dQoQZlc4oeqaUoAKQg94NILLfrY3oWzSyFaQCVNTcKE5PZ3cH8VP9w==
+      integrity: sha512-be0dKG6pni92bRjq0kvExtj/NrrAd28/8fCXkaI/4piTwQMSDSLMhWyW0NI1V+DBI3aa1HMlQu46/HjVLfmugA==
   /lodash/4.17.15:
     dev: false
     resolution:
@@ -88,10 +98,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
-  /minimist/0.0.10:
-    dev: false
-    resolution:
-      integrity: sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
   /minimist/1.2.5:
     dev: false
     resolution:
@@ -107,18 +113,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
-  /opener/1.4.3:
+  /opener/1.5.1:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha1-XG2ixdflgx6P+jlklQ+NZnSskLg=
-  /optimist/0.6.1:
-    dependencies:
-      minimist: 0.0.10
-      wordwrap: 0.0.3
-    dev: false
-    resolution:
-      integrity: sha1-2j6nRob6IaGaERwybpDrFaAZZoY=
+      integrity: sha512-goYSy5c2UXE4Ra1xixabeVh1guIX/ZV/YokJksb6q2lubWu6UbvPQ20p542/sFIll1nl8JnCyK9oBaOcCWXwvA==
   /portfinder/1.0.26:
     dependencies:
       async: 2.6.3
@@ -129,31 +128,31 @@ packages:
       node: '>= 0.12.0'
     resolution:
       integrity: sha512-Xi7mKxJHHMI3rIUrnm/jjUgwhbYMkp/XKEcZX3aG4BrumLpq3nmoQMX+ClYnDZnZ/New7IatC1no5RX0zo1vXQ==
-  /qs/2.3.3:
+  /qs/6.9.4:
     dev: false
+    engines:
+      node: '>=0.6'
     resolution:
-      integrity: sha1-6eha2+ddoLvkyOBHaghikPhjtAQ=
+      integrity: sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
   /requires-port/1.0.0:
     dev: false
     resolution:
       integrity: sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
-  /union/0.4.6:
+  /secure-compare/3.0.1:
+    dev: false
+    resolution:
+      integrity: sha1-8aAymzCLIh+uN7mXTz1XjQypmeM=
+  /union/0.5.0:
     dependencies:
-      qs: 2.3.3
+      qs: 6.9.4
     dev: false
     engines:
       node: '>= 0.8.0'
     resolution:
-      integrity: sha1-GY+9rrolTniLDvy2MLwR8kopWeA=
+      integrity: sha512-N6uOhuW6zO95P3Mel2I2zMsbsanvvtgn6jVqJv4vbVcz/JN0OkL9suomjQGmWtxJQXOCqUJvquc1sMeNz/IwlA==
   /url-join/2.0.5:
     dev: false
     resolution:
       integrity: sha1-WvIvGMBSoACkjXuCxenC4v7tpyg=
-  /wordwrap/0.0.3:
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    resolution:
-      integrity: sha1-o9XabNXAvAAI03I0u68b7WMFkQc=
 specifiers:
-  http-server: ^0.11.1
+  http-server: 0.12.3
